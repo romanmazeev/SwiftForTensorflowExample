@@ -10,6 +10,7 @@
 		302B842D23F54BB5009A509C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B842C23F54BB5009A509C /* main.swift */; };
 		30A4FFB623F54BF8008F6215 /* LabeledExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4FFB523F54BF8008F6215 /* LabeledExample.swift */; };
 		30A4FFB823F54C88008F6215 /* ImageClassificationDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */; };
+		30A4FFBA23F54CC1008F6215 /* DatasetUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4FFB923F54CC0008F6215 /* DatasetUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,7 @@
 		3041EA1F23ACE78C0035DA06 /* TensorFlowSwiftProj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TensorFlowSwiftProj.entitlements; sourceTree = "<group>"; };
 		30A4FFB523F54BF8008F6215 /* LabeledExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledExample.swift; sourceTree = "<group>"; };
 		30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationDataset.swift; sourceTree = "<group>"; };
+		30A4FFB923F54CC0008F6215 /* DatasetUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				302B842C23F54BB5009A509C /* main.swift */,
 				30A4FFB523F54BF8008F6215 /* LabeledExample.swift */,
 				30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */,
+				30A4FFB923F54CC0008F6215 /* DatasetUtilities.swift */,
 			);
 			path = TensorFlowSwiftProj;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 				30A4FFB823F54C88008F6215 /* ImageClassificationDataset.swift in Sources */,
 				30A4FFB623F54BF8008F6215 /* LabeledExample.swift in Sources */,
 				302B842D23F54BB5009A509C /* main.swift in Sources */,
+				30A4FFBA23F54CC1008F6215 /* DatasetUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
