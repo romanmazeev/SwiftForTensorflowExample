@@ -1,6 +1,6 @@
 //
 //  TestImageLoader.swift
-//  TensorFlowSwiftProj
+//  SwiftForTensorflowExample
 //
 //  Created by Roman Mazeev on 05.01.2020.
 //  Copyright © 2020 Roman Mazeev. All rights reserved.
@@ -12,7 +12,7 @@ import TensorFlow
 class TestImageLoader {
     func readDigit(filePath: String) -> Tensor<Float> {
         guard let image = NSImage(byReferencingFile: filePath) else { fatalError("Can`t load test image") }
-        var proposedRect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+        var proposedRect = CGRect(x: 0, y: 0, width: 28, height: 28)
         guard let pixelValues = image.cgImage(forProposedRect: &proposedRect, context: nil, hints: nil)?.pixelValues else {
             fatalError("Cant convert image to CGImage")
         }

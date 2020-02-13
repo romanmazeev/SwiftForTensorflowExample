@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  TensorFlowSwiftProj
+//  SwiftForTensorflowExample
 //
 //  Created by Roman Mazeev on 20.12.2019.
 //  Copyright © 2019 Roman Mazeev. All rights reserved.
@@ -93,7 +93,7 @@ func startTraining() {
 
 // MARK: - TestImage
 private func testImage() {
-    let imagePath = "/Users/romanmazeev/Desktop/TensorFlowSwiftProj/TensorFlowSwiftProj/TestImage/testImage.jpg"
+    let imagePath = "/Users/romanmazeev/SwiftForTensorflowExample/SwiftForTensorflowExample/TestImage/testImage.jpg"
     let tensorDigit = TestImageLoader().readDigit(filePath: imagePath)
     let ŷ = classifier(tensorDigit)
     guard let predictedDigit = ŷ.argmax(squeezingAxis: 1).scalars.first else { fatalError("Can`t predict") }
@@ -101,5 +101,5 @@ private func testImage() {
 }
 
 // MARK: - Main
-startTraining()
+//startTraining()
 testImage()

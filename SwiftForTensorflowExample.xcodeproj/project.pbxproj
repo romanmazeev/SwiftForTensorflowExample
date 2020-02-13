@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		3012D52423ACC4A200E4B5F8 /* TensorFlowSwiftProj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TensorFlowSwiftProj; sourceTree = BUILT_PRODUCTS_DIR; };
 		302B842C23F54BB5009A509C /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		3041EA1F23ACE78C0035DA06 /* TensorFlowSwiftProj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TensorFlowSwiftProj.entitlements; sourceTree = "<group>"; };
+		3072C8A623F566B000AD1034 /* TensorFlowSwiftProj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TensorFlowSwiftProj.entitlements; sourceTree = "<group>"; };
 		30A4FFB523F54BF8008F6215 /* LabeledExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledExample.swift; sourceTree = "<group>"; };
 		30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationDataset.swift; sourceTree = "<group>"; };
 		30A4FFB923F54CC0008F6215 /* DatasetUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetUtilities.swift; sourceTree = "<group>"; };
@@ -53,7 +53,8 @@
 		3012D51B23ACC4A200E4B5F8 = {
 			isa = PBXGroup;
 			children = (
-				3012D52623ACC4A200E4B5F8 /* TensorFlowSwiftProj */,
+				3072C8A623F566B000AD1034 /* TensorFlowSwiftProj.entitlements */,
+				3012D52623ACC4A200E4B5F8 /* SwiftForTensorflowExample */,
 				3012D52523ACC4A200E4B5F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,15 +67,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3012D52623ACC4A200E4B5F8 /* TensorFlowSwiftProj */ = {
+		3012D52623ACC4A200E4B5F8 /* SwiftForTensorflowExample */ = {
 			isa = PBXGroup;
 			children = (
-				3041EA1F23ACE78C0035DA06 /* TensorFlowSwiftProj.entitlements */,
 				302B842C23F54BB5009A509C /* main.swift */,
 				30A4FFC123F5546D008F6215 /* TestImage */,
 				30A4FFBD23F54D08008F6215 /* Dataset */,
 			);
-			path = TensorFlowSwiftProj;
+			path = SwiftForTensorflowExample;
 			sourceTree = "<group>";
 		};
 		30A4FFBD23F54D08008F6215 /* Dataset */ = {
@@ -135,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3012D51F23ACC4A200E4B5F8 /* Build configuration list for PBXProject "TensorFlowSwiftProj" */;
+			buildConfigurationList = 3012D51F23ACC4A200E4B5F8 /* Build configuration list for PBXProject "SwiftForTensorflowExample" */;
 			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -292,14 +292,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = TensorFlowSwiftProj/TensorFlowSwiftProj.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = TensorFlowSwiftProj.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AB5X5S74A;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_OPTIMIZATION_LEVEL = 1;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)";
-				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.tensorflowSwiftProj;
+				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.SwiftForTensorflow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -311,14 +311,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = TensorFlowSwiftProj/TensorFlowSwiftProj.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = TensorFlowSwiftProj.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AB5X5S74A;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_OPTIMIZATION_LEVEL = 1;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)";
-				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.tensorflowSwiftProj;
+				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.SwiftForTensorflow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -329,7 +329,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3012D51F23ACC4A200E4B5F8 /* Build configuration list for PBXProject "TensorFlowSwiftProj" */ = {
+		3012D51F23ACC4A200E4B5F8 /* Build configuration list for PBXProject "SwiftForTensorflowExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3012D52923ACC4A200E4B5F8 /* Debug */,
