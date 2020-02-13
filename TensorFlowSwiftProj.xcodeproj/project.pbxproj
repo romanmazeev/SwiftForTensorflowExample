@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		302B842D23F54BB5009A509C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B842C23F54BB5009A509C /* main.swift */; };
 		30A4FFB623F54BF8008F6215 /* LabeledExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4FFB523F54BF8008F6215 /* LabeledExample.swift */; };
+		30A4FFB823F54C88008F6215 /* ImageClassificationDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		302B842C23F54BB5009A509C /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3041EA1F23ACE78C0035DA06 /* TensorFlowSwiftProj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TensorFlowSwiftProj.entitlements; sourceTree = "<group>"; };
 		30A4FFB523F54BF8008F6215 /* LabeledExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledExample.swift; sourceTree = "<group>"; };
+		30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationDataset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3041EA1F23ACE78C0035DA06 /* TensorFlowSwiftProj.entitlements */,
 				302B842C23F54BB5009A509C /* main.swift */,
 				30A4FFB523F54BF8008F6215 /* LabeledExample.swift */,
+				30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */,
 			);
 			path = TensorFlowSwiftProj;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30A4FFB823F54C88008F6215 /* ImageClassificationDataset.swift in Sources */,
 				30A4FFB623F54BF8008F6215 /* LabeledExample.swift in Sources */,
 				302B842D23F54BB5009A509C /* main.swift in Sources */,
 			);
