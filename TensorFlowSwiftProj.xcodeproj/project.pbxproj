@@ -12,6 +12,7 @@
 		30A4FFB823F54C88008F6215 /* ImageClassificationDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */; };
 		30A4FFBA23F54CC1008F6215 /* DatasetUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4FFB923F54CC0008F6215 /* DatasetUtilities.swift */; };
 		30A4FFBC23F54CFB008F6215 /* MNIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4FFBB23F54CFB008F6215 /* MNIST.swift */; };
+		30A4FFBF23F5543B008F6215 /* TestImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4FFBE23F5543B008F6215 /* TestImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,7 @@
 		30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationDataset.swift; sourceTree = "<group>"; };
 		30A4FFB923F54CC0008F6215 /* DatasetUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetUtilities.swift; sourceTree = "<group>"; };
 		30A4FFBB23F54CFB008F6215 /* MNIST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNIST.swift; sourceTree = "<group>"; };
+		30A4FFBE23F5543B008F6215 /* TestImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				3041EA1F23ACE78C0035DA06 /* TensorFlowSwiftProj.entitlements */,
 				302B842C23F54BB5009A509C /* main.swift */,
+				30A4FFBE23F5543B008F6215 /* TestImageLoader.swift */,
 				30A4FFBD23F54D08008F6215 /* Dataset */,
 			);
 			path = TensorFlowSwiftProj;
@@ -149,6 +152,7 @@
 			files = (
 				30A4FFBC23F54CFB008F6215 /* MNIST.swift in Sources */,
 				30A4FFB823F54C88008F6215 /* ImageClassificationDataset.swift in Sources */,
+				30A4FFBF23F5543B008F6215 /* TestImageLoader.swift in Sources */,
 				30A4FFB623F54BF8008F6215 /* LabeledExample.swift in Sources */,
 				302B842D23F54BB5009A509C /* main.swift in Sources */,
 				30A4FFBA23F54CC1008F6215 /* DatasetUtilities.swift in Sources */,
