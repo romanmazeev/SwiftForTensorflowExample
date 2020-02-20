@@ -30,7 +30,6 @@
 /* Begin PBXFileReference section */
 		3012D52423ACC4A200E4B5F8 /* SwiftForTensorflowExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftForTensorflowExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		302B842C23F54BB5009A509C /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		3040652823FEC234008ACEE6 /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
 		3072C8A623F566B000AD1034 /* SwiftForTensorflowExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftForTensorflowExample.entitlements; sourceTree = "<group>"; };
 		30A4FFB523F54BF8008F6215 /* LabeledExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledExample.swift; sourceTree = "<group>"; };
 		30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationDataset.swift; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				302B842C23F54BB5009A509C /* main.swift */,
-				30A4FFC123F5546D008F6215 /* TestImage */,
 				30A4FFBD23F54D08008F6215 /* Dataset */,
 			);
 			path = SwiftForTensorflowExample;
@@ -80,21 +78,13 @@
 		30A4FFBD23F54D08008F6215 /* Dataset */ = {
 			isa = PBXGroup;
 			children = (
+				30A4FFBE23F5543B008F6215 /* TestImageLoader.swift */,
 				30A4FFB523F54BF8008F6215 /* LabeledExample.swift */,
 				30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */,
 				30A4FFB923F54CC0008F6215 /* DatasetUtilities.swift */,
 				30A4FFBB23F54CFB008F6215 /* MNIST.swift */,
 			);
 			path = Dataset;
-			sourceTree = "<group>";
-		};
-		30A4FFC123F5546D008F6215 /* TestImage */ = {
-			isa = PBXGroup;
-			children = (
-				30A4FFBE23F5543B008F6215 /* TestImageLoader.swift */,
-				3040652823FEC234008ACEE6 /* testImage.jpg */,
-			);
-			path = TestImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
