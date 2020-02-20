@@ -10,22 +10,30 @@ import Cocoa
 import TensorFlow
 
 class TestImageLoader {
-    func readDigit(filePath: String) -> Tensor<Float> {
-        guard let image = NSImage(byReferencingFile: filePath) else { fatalError("Can`t load test image") }
+    func getDigit() -> Tensor<Float> {
+        guard let imageURL = selectFile() else { fatalError("Cant get image") }
+        let image = NSImage(byReferencing: imageURL)
         var proposedRect = CGRect(x: 0, y: 0, width: 28, height: 28)
-        guard let pixelValues = image.cgImage(forProposedRect: &proposedRect, context: nil, hints: nil)?.pixelValues else {
+        guard let pixelValues = image.cgImage(forProposedRect: &proposedRect, context: nil, hints: nil)?.pixelScalarValues else {
             fatalError("Cant convert image to CGImage")
         }
 
-        let scalars = pixelValues.map { Float(Int($0)) }
+        return Tensor(shape: [1, 1, Int(image.size.height), Int(image.size.width)], scalars: pixelValues)
+            .transposed(permutation: [0, 2, 3, 1]) / 255 // NHWC (Number of samples x Height x Width x Channels)
+    }
 
-        return Tensor(shape: [1, 1, Int(image.size.height), Int(image.size.width)], scalars: scalars)
-            .transposed(permutation: [0, 2, 3, 1]) / 255 // NHWC
+    func selectFile() -> URL? {
+        let dialog = NSOpenPanel()
+        dialog.allowedFileTypes = ["jpg"]
+        dialog.allowsMultipleSelection = false
+        dialog.canChooseDirectories = false
+        guard dialog.runModal() == .OK else { return nil }
+        return dialog.url
     }
 }
 
 extension CGImage {
-    var pixelValues: [UInt8] {
+    var pixelScalarValues: [Float] {
         var pixelValues = [UInt8](repeating: 0, count: height * bytesPerRow)
 
         let contextRef = CGContext(data: &pixelValues,
@@ -37,6 +45,6 @@ extension CGImage {
                                    bitmapInfo: 0)
         contextRef?.draw(self, in: CGRect(x: 0, y: 0, width: width, height: height))
 
-        return pixelValues
+        return pixelValues.map { Float(Int($0)) }
     }
 }

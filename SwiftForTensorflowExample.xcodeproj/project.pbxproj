@@ -19,7 +19,7 @@
 		3012D52223ACC4A200E4B5F8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			dstPath = /usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
 			);
@@ -28,15 +28,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3012D52423ACC4A200E4B5F8 /* TensorFlowSwiftProj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TensorFlowSwiftProj; sourceTree = BUILT_PRODUCTS_DIR; };
+		3012D52423ACC4A200E4B5F8 /* SwiftForTensorflowExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftForTensorflowExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		302B842C23F54BB5009A509C /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		3072C8A623F566B000AD1034 /* TensorFlowSwiftProj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TensorFlowSwiftProj.entitlements; sourceTree = "<group>"; };
+		3040652823FEC234008ACEE6 /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
+		3072C8A623F566B000AD1034 /* SwiftForTensorflowExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftForTensorflowExample.entitlements; sourceTree = "<group>"; };
 		30A4FFB523F54BF8008F6215 /* LabeledExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledExample.swift; sourceTree = "<group>"; };
 		30A4FFB723F54C88008F6215 /* ImageClassificationDataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationDataset.swift; sourceTree = "<group>"; };
 		30A4FFB923F54CC0008F6215 /* DatasetUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetUtilities.swift; sourceTree = "<group>"; };
 		30A4FFBB23F54CFB008F6215 /* MNIST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNIST.swift; sourceTree = "<group>"; };
 		30A4FFBE23F5543B008F6215 /* TestImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestImageLoader.swift; sourceTree = "<group>"; };
-		30A4FFC023F55469008F6215 /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 		3012D51B23ACC4A200E4B5F8 = {
 			isa = PBXGroup;
 			children = (
-				3072C8A623F566B000AD1034 /* TensorFlowSwiftProj.entitlements */,
+				3072C8A623F566B000AD1034 /* SwiftForTensorflowExample.entitlements */,
 				3012D52623ACC4A200E4B5F8 /* SwiftForTensorflowExample */,
 				3012D52523ACC4A200E4B5F8 /* Products */,
 			);
@@ -62,7 +62,7 @@
 		3012D52523ACC4A200E4B5F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3012D52423ACC4A200E4B5F8 /* TensorFlowSwiftProj */,
+				3012D52423ACC4A200E4B5F8 /* SwiftForTensorflowExample */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				30A4FFBE23F5543B008F6215 /* TestImageLoader.swift */,
-				30A4FFC023F55469008F6215 /* testImage.jpg */,
+				3040652823FEC234008ACEE6 /* testImage.jpg */,
 			);
 			path = TestImage;
 			sourceTree = "<group>";
@@ -100,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3012D52323ACC4A200E4B5F8 /* TensorFlowSwiftProj */ = {
+		3012D52323ACC4A200E4B5F8 /* SwiftForTensorflowExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3012D52B23ACC4A200E4B5F8 /* Build configuration list for PBXNativeTarget "TensorFlowSwiftProj" */;
+			buildConfigurationList = 3012D52B23ACC4A200E4B5F8 /* Build configuration list for PBXNativeTarget "SwiftForTensorflowExample" */;
 			buildPhases = (
 				3012D52023ACC4A200E4B5F8 /* Sources */,
 				3012D52123ACC4A200E4B5F8 /* Frameworks */,
@@ -112,11 +112,11 @@
 			);
 			dependencies = (
 			);
-			name = TensorFlowSwiftProj;
+			name = SwiftForTensorflowExample;
 			packageProductDependencies = (
 			);
 			productName = TensorFlowSwiftProj;
-			productReference = 3012D52423ACC4A200E4B5F8 /* TensorFlowSwiftProj */;
+			productReference = 3012D52423ACC4A200E4B5F8 /* SwiftForTensorflowExample */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -150,7 +150,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3012D52323ACC4A200E4B5F8 /* TensorFlowSwiftProj */,
+				3012D52323ACC4A200E4B5F8 /* SwiftForTensorflowExample */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = TensorFlowSwiftProj.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SwiftForTensorflowExample.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AB5X5S74A;
@@ -311,7 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = TensorFlowSwiftProj.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SwiftForTensorflowExample.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AB5X5S74A;
@@ -338,7 +338,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3012D52B23ACC4A200E4B5F8 /* Build configuration list for PBXNativeTarget "TensorFlowSwiftProj" */ = {
+		3012D52B23ACC4A200E4B5F8 /* Build configuration list for PBXNativeTarget "SwiftForTensorflowExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3012D52C23ACC4A200E4B5F8 /* Debug */,

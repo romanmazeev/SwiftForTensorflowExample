@@ -81,7 +81,7 @@ public struct MNIST: ImageClassificationDataset {
             label: Tensor(labels),
             data:
                 Tensor(shape: [rowCount, 1, imageHeight, imageWidth], scalars: images)
-                .transposed(permutation: [0, 2, 3, 1]) / 255  // NHWC
+                .transposed(permutation: [0, 2, 3, 1]) / 255  // NHWC (Number of samples x Height x Width x Channels)
         )
     }
 }

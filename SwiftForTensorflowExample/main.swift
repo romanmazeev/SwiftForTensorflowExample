@@ -8,10 +8,23 @@
 
 import TensorFlow
 import Foundation
+import AppKit
 
-typealias Classifier = Sequential<Conv2D<Float>, Sequential<AvgPool2D<Float>, Sequential<Conv2D<Float>,
-    Sequential<AvgPool2D<Float>, Sequential<Flatten<Float>, Sequential<Dense<Float>, Sequential<Dense<Float>,
-        Dense<Float>>>>>>>>
+typealias Classifier = Sequential<
+    Conv2D<Float>, Sequential<
+        AvgPool2D<Float>, Sequential<
+            Conv2D<Float>,Sequential<
+                AvgPool2D<Float>, Sequential<
+                    Flatten<Float>, Sequential<
+                        Dense<Float>, Sequential<
+                            Dense<Float>, Dense<Float>
+                        >
+                    >
+                >
+            >
+        >
+    >
+>
 
 struct Statistics {
     var correctGuessCount = 0
@@ -20,7 +33,7 @@ struct Statistics {
     var batches = 0
 }
 
-private var classifier: Classifier = Sequential {
+private var classifier = Sequential {
     Conv2D<Float>(filterShape: (5, 5, 1, 6), padding: .same, activation: relu)
     AvgPool2D<Float>(poolSize: (2, 2), strides: (2, 2))
     Conv2D<Float>(filterShape: (5, 5, 6, 16), activation: relu)
@@ -39,9 +52,22 @@ struct Constants {
 }
 
 func startTraining() {
+    func logTrain(epoch: Int, trainStatistics: Statistics, testStatistics: Statistics) {
+        print(
+            """
+            [Epoch \(epoch)] \
+            Training Loss : \(trainStatistics.totalLoss / Float(trainStatistics.batches)), \
+            Training Accuracy: \(trainStatistics.correctGuessCount)/\(trainStatistics.totalGuessCount) \
+            (\(Float(trainStatistics.correctGuessCount) / Float(trainStatistics.totalGuessCount))), \
+            Test Loss: \(testStatistics.totalLoss / Float(testStatistics.batches)), \
+            Test Accuracy: \(testStatistics.correctGuessCount)/\(testStatistics.totalGuessCount) \
+            (\(Float(testStatistics.correctGuessCount) / Float(testStatistics.totalGuessCount)))
+            """
+        )
+    }
     let dataset = MNIST()
     print("Beginning training...")
-    (1...Constants.epochCount).forEach { epoch in
+    for epoch in 1...Constants.epochCount {
         // Training dataset
         Context.local.learningPhase = .training
         var trainingStatistics = Statistics()
@@ -75,31 +101,18 @@ func startTraining() {
         statistics.batches += 1
         return loss
     }
-
-    func logTrain(epoch: Int, trainStatistics: Statistics, testStatistics: Statistics) {
-        print(
-            """
-            [Epoch \(epoch)] \
-            Training Loss : \(trainStatistics.totalLoss / Float(trainStatistics.batches)), \
-            Training Accuracy: \(trainStatistics.correctGuessCount)/\(trainStatistics.totalGuessCount) \
-            (\(Float(trainStatistics.correctGuessCount) / Float(trainStatistics.totalGuessCount))), \
-            Test Loss: \(testStatistics.totalLoss / Float(testStatistics.batches)), \
-            Test Accuracy: \(testStatistics.correctGuessCount)/\(testStatistics.totalGuessCount) \
-            (\(Float(testStatistics.correctGuessCount) / Float(testStatistics.totalGuessCount)))
-            """
-        )
-    }
 }
+
+
 
 // MARK: - TestImage
 private func testImage() {
-    let imagePath = "/Users/romanmazeev/SwiftForTensorflowExample/SwiftForTensorflowExample/TestImage/testImage.jpg"
-    let tensorDigit = TestImageLoader().readDigit(filePath: imagePath)
+    let tensorDigit = TestImageLoader().getDigit()
     let ŷ = classifier(tensorDigit)
     guard let predictedDigit = ŷ.argmax(squeezingAxis: 1).scalars.first else { fatalError("Can`t predict") }
     print("Test digit is: \(predictedDigit)")
 }
 
 // MARK: - Main
-//startTraining()
+startTraining()
 testImage()
