@@ -26,7 +26,7 @@ typealias Classifier = Sequential<
     >
 >
 
-struct Statistics {
+class Statistics {
     var correctGuessCount = 0
     var totalGuessCount = 0
     var totalLoss: Float = 0
@@ -70,27 +70,27 @@ func startTraining() {
     for epoch in 1...Constants.epochCount {
         // Training dataset
         Context.local.learningPhase = .training
-        var trainingStatistics = Statistics()
+        let trainStatistics = Statistics()
         let shuffledTrainingDataset = dataset.trainingDataset.shuffled(sampleCount: dataset.trainingExampleCount,
                                                                        randomSeed: Int64(epoch))
         shuffledTrainingDataset.batched(Constants.batchSize).forEach { example in
             optimizer.update(&classifier, along: TensorFlow.gradient(at: classifier) {
-                getLoss(for: $0, example: example,statistics: &trainingStatistics)
+                getLoss(for: $0, example: example, statistics: trainStatistics)
             })
         }
 
         // Test dataset
         Context.local.learningPhase = .inference
-        var testingStatistics = Statistics()
+        let testStatistics = Statistics()
         dataset.testDataset.batched(Constants.batchSize).forEach {
-            getLoss(for: classifier, example: $0, statistics: &testingStatistics)
+            getLoss(for: classifier, example: $0, statistics: testStatistics)
         }
 
-        logTrain(epoch: epoch, trainStatistics: trainingStatistics, testStatistics: testingStatistics)
+        logTrain(epoch: epoch, trainStatistics: trainStatistics, testStatistics: testStatistics)
     }
 
     @discardableResult
-    func getLoss(for classifier: Classifier, example: LabeledExample, statistics: inout Statistics) -> Tensor<Float> {
+    func getLoss(for classifier: Classifier, example: LabeledExample, statistics: Statistics) -> Tensor<Float> {
         let (labels, images) = (example.label, example.data)
         let ŷ = classifier(images)
         let correctPredictions = ŷ.argmax(squeezingAxis: 1) .== labels
